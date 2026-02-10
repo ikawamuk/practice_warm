@@ -11,13 +11,13 @@ int main()
 	"#include <unistd.h>%c"\
 	"int main()%c"\
 	"{%c"\
-	"char *s = %c%s%c;%c"\
-	"char fn[] = %c./quine_XXXXXX.c%c;%c"\
-	"int fd = mkstemps(fn, 2);%c"\
-	"FILE *fp = fdopen(fd, %cw%c);%c"\
-	"fprintf(fp, s, 10, 10, 10, 10, 10, 10, 34, s, 34, 10, 34, 34, 10, 10, 34, 34, 10, 10, 10, 10, 10);%c"\
-	"fclose(fp);%c"\
-	"return 0;%c"\
+	"    char *s = %c%s%c;%c"\
+	"    char fn[] = %c./quine_XXXXXX.c%c;%c"\
+	"    int fd = mkstemps(fn, 2);%c"\
+	"    FILE *fp = fdopen(fd, %cw%c);%c"\
+	"    fprintf(fp, s, 10, 10, 10, 10, 10, 10, 34, s, 34, 10, 34, 34, 10, 10, 34, 34, 10, 10, 10, 10, 10);%c"\
+	"    fclose(fp);%c"\
+	"    return 0;%c"\
 	"}%c";
     char fn[] = "./quine_XXXXXX.c";
     int fd = mkstemps(fn, 2);
